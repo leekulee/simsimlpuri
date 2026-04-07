@@ -1,0 +1,12 @@
+{
+  "name": "simsimlpuri",
+  "version": "1.0.0",
+  "description": "직장인 익명 심심풀이 커뮤니티",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

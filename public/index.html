@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>심심풀이</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 닉네임 설정 화면 -->
+  <div id="onboarding" class="screen">
+    <div class="onboarding-box">
+      <div class="logo">😪</div>
+      <h1>심심풀이</h1>
+      <p class="sub">직장인 익명 수다방</p>
+      <input type="text" id="nickname-input" placeholder="닉네임 (예: 월급루팡)" maxlength="10">
+      <select id="job-select">
+        <option value="직장인">직군 선택 (선택사항)</option>
+        <option value="개발자">개발자</option>
+        <option value="디자이너">디자이너</option>
+        <option value="마케터">마케터</option>
+        <option value="영업">영업</option>
+        <option value="기획자">기획자</option>
+        <option value="인사/총무">인사/총무</option>
+        <option value="재무/회계">재무/회계</option>
+        <option value="직장인">기타 직장인</option>
+      </select>
+      <button id="start-btn" onclick="startApp()">입장하기</button>
+    </div>
+  </div>
+
+  <!-- 메인 화면 -->
+  <div id="main" class="screen hidden">
+    <header>
+      <div class="header-inner">
+        <span class="header-logo">😪 심심풀이</span>
+        <span id="header-nickname"></span>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- 글 작성 -->
+      <div class="write-box">
+        <textarea id="post-input" placeholder="지금 어때요? 그냥 털어놓아요 ㅎ" maxlength="140"></textarea>
+        <div class="write-footer">
+          <span id="char-count">0 / 140</span>
+          <button onclick="submitPost()">올리기</button>
+        </div>
+      </div>
+
+      <!-- 피드 -->
+      <div id="feed"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
