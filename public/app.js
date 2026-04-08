@@ -111,5 +111,8 @@ setInterval(loadPosts, 30000);
 const savedUser = localStorage.getItem('user');
 if (savedUser) {
   currentUser = JSON.parse(savedUser);
-  document.getElementById('nickname-input').value = currentUser.nickname;
+  document.getElementById('onboarding').classList.add('hidden');
+  document.getElementById('main').classList.remove('hidden');
+  document.getElementById('header-nickname').textContent = currentUser.nickname;
+  loadPosts();
 }
